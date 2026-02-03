@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  pic-tool:
+    build: .
+    image: pic-tool:latest
+    container_name: pic-tool-container
+    ports:
+      - "8080:80"
+    restart: unless-stopped

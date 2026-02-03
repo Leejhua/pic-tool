@@ -1,0 +1,9 @@
+node_modules
+.git
+.vscode
+.kiro
+__tests__
+*.md
+jest.config.js
+package.json
+package-lock.json
