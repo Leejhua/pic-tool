@@ -8,3 +8,12 @@ services:
     ports:
       - "8080:80"
     restart: unless-stopped
+    networks:
+      - pic_tool_net
+
+networks:
+  pic_tool_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.30.0.0/16
