@@ -8,12 +8,5 @@ services:
     ports:
       - "8080:80"
     restart: unless-stopped
-    networks:
-      - pic_tool_net
-
-networks:
-  pic_tool_net:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 192.168.215.0/24
+    # 移除自定义网络，改用默认 bridge 网络，避免 IP 池耗尽或冲突问题
+    network_mode: bridge
